@@ -1,0 +1,25 @@
+
+
+
+<table class="table" id="table" >
+  <thead>
+  <th>Id</th>
+  <th>Názov</th>
+  <th>Cena</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of polozky">
+    <td>{{c.id}}</td>
+    <td>{{c.nazov}}</td>
+    <td>{{c.cena}}</td>
+    <td>
+      <button class="btn-secondary" (click)="edit(c)">Upraviť</button>
+      <button class="btn-remove" (click)="remove(c)">Vymazať</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+

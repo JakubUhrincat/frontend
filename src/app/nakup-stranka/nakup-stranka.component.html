@@ -1,0 +1,16 @@
+<app-nakup-formular [nakup]="actNakup"
+                  (addNakup)="add($event)"
+                  (editNakup)="edit($event)">
+</app-nakup-formular>
+<br>
+<br>
+<app-nakup-zoznam [nakupy]="nakupy"
+                (editNakup)="editNakupFromList($event)"
+                (removeNakup)="removeNakupFromList($event)">
+</app-nakup-zoznam>
+
+<br>
+
+<div>
+  <button class="btn-secondary" (click)="goBack()">Späť do menu</button>
+</div>

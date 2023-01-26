@@ -1,0 +1,16 @@
+<div class="container">
+  <form [formGroup]="form">
+  Dátum:
+  <input class="input" type="date" formControlName="datum"><br>
+  Názov obchodu:
+  <input class="input" formControlName="obchod"><br>
+  <select class="input" formControlName="polozkaId">
+    <option value="">Položka</option>
+    <option *ngFor="let i of polozky" [ngValue]="i.id">{{i.nazov}}</option>
+  </select><br><br>
+  <button class="btn-focus" (click)="add()" *ngIf="form.value.id === null">Pridať</button>
+  <button class="btn-focus" (click)="edit()" *ngIf="form.value.id !== null">Upraviť</button>
+  <button class="btn-remove" (click)="remove()">Vymazať</button>
+  </form>
+</div>
+

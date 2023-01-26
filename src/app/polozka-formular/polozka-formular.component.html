@@ -1,0 +1,15 @@
+<h1>Položka</h1>
+<div class="container">
+  <form [formGroup]="form">
+    <label>Názov položky
+      <input class="input" formControlName="nazov">
+    </label><br>
+    <label>Cena
+      <input class="input" formControlName="cena">
+    </label><br>
+
+    <button class="btn-focus" (click)="add()" *ngIf="form.value.id === null">Pridať</button>
+    <button class="btn-focus" (click)="edit()" *ngIf="form.value.id !== null">Upraviť</button>
+    <button class="btn-remove" (click)="remove()">Odstrániť</button>
+  </form>
+</div>

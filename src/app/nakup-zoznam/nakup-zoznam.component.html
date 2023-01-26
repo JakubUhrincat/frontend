@@ -1,0 +1,26 @@
+<h1>List of shoppings</h1>
+
+
+<table >
+  <thead>
+  <th>ID</th>
+  <th>Dátum</th>
+  <th>Obchod</th>
+  <th>Názov položky</th>
+  <th>Cena položky</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of nakupy">
+    <td>{{c.id}}</td>
+    <td>{{c.datum | date: 'shortDate'}}</td>
+    <td>{{c.obchod}}</td>
+    <td>{{c.nazov}}</td>
+    <td>{{c.cena}}</td>
+    <td>
+      <button class="btn-secondary" (click)="edit(c)">Upraviť</button>
+      <button class="btn-remove" (click)="remove(c)">Vymazať</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

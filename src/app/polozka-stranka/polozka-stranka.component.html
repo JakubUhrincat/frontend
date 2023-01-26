@@ -1,0 +1,17 @@
+<app-polozka-formular [polozka]="actPolozka"
+                       (addPolozka)="add($event)"
+                       (editPolozka)="edit($event)">
+</app-polozka-formular>
+<br>
+<br>
+<app-polozka-zoznam [polozky]="polozky"
+                     (editPolozka)="editPolozkaFromList($event)"
+                     (removePolozka)="removePolozkaFromList($event)">
+</app-polozka-zoznam>
+
+<br>
+
+<div>
+  <button class="btn-secondary" (click)="goBack()">Späť do menu</button>
+</div>
+
